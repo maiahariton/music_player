@@ -1,0 +1,145 @@
+@import url(http://weloveiconfonts.com/api/?family=entypo|fontawesome);
+body {
+    overflow: hidden;
+    background: #E71D36;
+}
+
+/* entypo */
+[class*="entypo-"]:before {
+    font-family: 'entypo', sans-serif;
+}
+
+/* fontawesome */
+[class*="fontawesome-"]:before {
+    font-family: 'FontAwesome', sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.player {
+    width: 800px;
+    height: 50px;
+    position: fixed;
+    top: calc(80%);
+    left: calc(20%);
+    background: #323232;
+    border-radius: 20px;
+    padding: 10px;
+    -webkit-transition: opacity 500ms linear;
+    transition: opacity 500ms linear;
+    opacity: .5;
+}
+.player .button {
+    background: white;
+    width: calc(10% - 5px);
+    height: 95%;
+    display: inline-block;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 10px;
+    color: #323232;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+}
+.player .button:hover {
+    box-shadow: 0 0 10px grey;
+    cursor: pointer;
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+.player .button:active {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+}
+.player .button:before {
+    position: relative;
+    font-size: 20px;
+    top: -30%;
+}
+.player #prev {
+    border-radius: 10px 0 0 10px;
+}
+.player #play {
+    border-radius: 0;
+}
+.player #next {
+    border-radius: 0 10px 10px 0;
+}
+.player .range {
+    -webkit-appearance: none;
+    height: 45%;
+    border-radius: 5px;
+    position: relative;
+    outline: none;
+    top: -25%;
+    width: 38%;
+}
+.player .range::-moz-range-track {
+    -moz-appearance: none;
+    height: 45%;
+    border-radius: 5px;
+    margin: 0;
+    position: relative;
+    outline: none;
+    top: -25%;
+}
+.player .range::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    width: 10px;
+    height: 25px;
+    box-shadow: 0 0 5px grey;
+    background: white;
+    border-radius: 5px;
+}
+.player .range::-moz-range-thumb {
+    -moz-appearance: none;
+    width: 10px;
+    height: 25px;
+    box-shadow: 0 0 5px grey;
+    background: white;
+    border-radius: 5px;
+}
+.player #time {
+    font-size: 15px;
+    position: relative;
+    top: -25%;
+    color: #fff;
+}
+.player #volume {
+    position: relative;
+}
+.player #volume:hover {
+    -webkit-transform: none;
+    transform: none;
+}
+.player #volume:hover .container {
+    width: 100px;
+}
+.player #volume:hover .container .range {
+    opacity: 1;
+}
+.player #volume .container {
+    position: absolute;
+    top: 7%;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+    left: 94%;
+    width: 0px;
+    height: 30px;
+    padding-top: 9px;
+}
+.player #volume .container .range {
+    width: 90%;
+    display: block;
+    height: 14px;
+    border-radius: 0 5px 5px 0;
+    opacity: 0;
+    -webkit-transition: all 300ms;
+    transition: all 300ms;
+}
+
+span#time {
+    padding-right: 20px;
+}
